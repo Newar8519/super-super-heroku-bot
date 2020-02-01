@@ -10,9 +10,13 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'ping') {
-    	message.reply('pong');
+    	return message.channel.reply({embed: {
+        color: 3447003,
+        description: "This bot was programed by me"
+        }});
   	}
 });
+
 
 
 // THIS  MUST  BE  THIS  WAY
