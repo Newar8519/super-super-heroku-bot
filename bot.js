@@ -16,12 +16,6 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '?Help') {
-    	message.channel.send('No');
-  	}
-});
-
-client.on('message', message => {
-    if (message.content === '?Help') {
     	const exampleEmbed = {
 	color: 0x0099ff,
 	title: 'Some title',
