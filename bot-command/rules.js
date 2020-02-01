@@ -3,10 +3,8 @@ const client = new Discord.Client();
 
 client.on('message', message => {
     if (message.content === '?Rules') {
-    	message.channel.send('pong\n True!');
+    	message.channel.send('True!');
   	}
 });
 
-
-// THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
