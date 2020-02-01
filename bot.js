@@ -14,6 +14,16 @@ client.on('message', message => {
   	}
 });
 
+client.on('message', message => {
+  if (message.content === '?Help') {
+    const embed = new RichEmbed()
+      .setTitle('A slick little embed')
+      .setColor(0xFF0000)
+      .setDescription('Hello, this is a slick embed!');
+    message.channel.send(embed);
+  }
+});
+
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
