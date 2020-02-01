@@ -1,18 +1,19 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const { Client, RichEmbed } = require('discord.js');
+
+const client = new Client();
 
 client.on('ready', () => {
   console.log('I am ready!');
 });
 
 client.on('message', message => {
-  if (message.content === '?Help') {
+  if (message.content === 'how to embed') {
     const embed = new RichEmbed()
-      .setTitle('Support Command!')
+      .setTitle('A slick little embed')
       .setColor(0xFF0000)
-      .setDescription('This works if you see this.');
+      .setDescription('Hello, this is a slick embed!');
     message.channel.send(embed);
   }
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login('NjcyOTkwMjA5MTY3ODUxNTU5.XjWB6g.8IbhosZ3Z05qeeRv4Ci0RutAQro');
